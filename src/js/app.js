@@ -159,10 +159,8 @@ var controller = (function (dataCtrl, UICtrl) {
 
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function() {
-            if (xmlHttp.readyState === 4){   //if complete
-                if(xmlHttp.status === 200){
+            if (xmlHttp.readyState === 4 && xmlHttp.status === 200){
                 callback(xmlHttp.responseText);
-                    }
             }else{
                 err = true;
                 UICtrl.toggleError(err);
