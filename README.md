@@ -1,5 +1,7 @@
-# JuniorFrontendTest
+JuniorFrontendTest
 ===========================================
+
+APP - http://filipjerga.com/gitapp/src/index.html
 
 Application is tested in Google Chrome , Safari
 
