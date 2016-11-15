@@ -1,9 +1,10 @@
 # JuniorFrontendTest
 
 1. App is fully working and fetching data from github.
-2. User can click repository that will navigate him to actual Git repository
-3. When sending first request getting error message on fronted even request is not failed and I get data afterAll( still investigating).
-4. Added Unit testing even when there is not much to test because of encapsulated code, and most of app is manipulating DOM
+2. User can search users of github and list repositories with number of works and watchers.
+3. User can click repository that will navigate him to actual Git repository
+4. When sending first request getting error message on fronted even request is not failed and I get data afterAll( still investigating).
+5. Added Unit testing even when there is not much to test because of encapsulated code, and most of app is manipulating DOM
 
 STRUCTURE OF APP
 
