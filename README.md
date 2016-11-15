@@ -34,5 +34,5 @@ In case for any questions please contanct me, I will be more than happy to answe
 was really fun.
 
 
-TIME SPENT - +- 6hours
+TIME SPENT : +- 6hours
 ===========================================
