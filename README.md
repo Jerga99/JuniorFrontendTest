@@ -33,3 +33,6 @@ In this App is used plain javascript, no libaries and frameworks except UnitTest
 In case for any questions please contanct me, I will be more than happy to answer your questions. Work on this project
 was really fun.
 
+
+TIME SPENT - +- 6hours
+===========================================
