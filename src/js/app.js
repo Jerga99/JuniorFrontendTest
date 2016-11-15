@@ -63,14 +63,12 @@ var UIController = (function () {
         },
 
         renderRepos: function(gitUser){
-            console.log(gitUser);
             var repos = gitUser.repos;
             var ulDOM = document.querySelector(DOMstrings.repos);
             var liDOM = '';
 
             if(repos){
                 repos.forEach(function(repo){
-                    console.log(repo.html_url);
                 liDOM = "<li> <div class='results__main__base__results--repo'><h1><a target='_blank' href="+ repo.html_url + ">"+ repo.name+" </a></h1></div> <div class='results__main__base__results--stats'><i class='ion-star'></i><span class='stats--likes'>"+ repo.watchers +"</span><i class='ion-network'></i><span class='stats--forks'>" + repo.forks + "</span></div> </li>"
                     ulDOM.insertAdjacentHTML('beforeend', liDOM);
                 });
