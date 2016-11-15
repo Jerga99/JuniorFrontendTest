@@ -15,7 +15,6 @@ var dataController = (function () {
     }
 })();
 
-
 // UI CONTROLLER
 
 var UIController = (function () {
@@ -98,6 +97,7 @@ var UIController = (function () {
             }else{
                 document.querySelector(DOMstrings.formError).style.display = "none";
                 document.querySelector(DOMstrings.form).style.height = "none";
+                document.querySelector(DOMstrings.form).style.height = "140px";
             }
         },
 
@@ -141,11 +141,13 @@ var controller = (function (dataCtrl, UICtrl) {
                         err = false;
                         UICtrl.toggleError(err);
 
+                    if(!err) {
                         gitUser = dataCtrl.addUser(user, repos);
                         UICtrl.showContainer();
                         UICtrl.renderProfile(gitUser);
                         UICtrl.renderRepos(gitUser);
                         UICtrl.renderShadow();
+                    }
                 });
             });
         }
@@ -154,17 +156,16 @@ var controller = (function (dataCtrl, UICtrl) {
     var asyncGetCallToGit = function(username, repos, callback ){
         var reqURL = 'https://api.github.com/users/' + username;
         reqURL += repos ? '/repos' : '';
-
         var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", reqURL, true); // true for asynchronous
         xmlHttp.onreadystatechange = function() {
-            if (xmlHttp.readyState === 4 && xmlHttp.status === 200){
+            if (xmlHttp.readyState === xmlHttp.DONE && xmlHttp.status === 200){
                 callback(xmlHttp.responseText);
-            }else{
+            }else if (xmlHttp.status == 404) {
                 err = true;
                 UICtrl.toggleError(err);
             }
         };
-        xmlHttp.open("GET", reqURL, true); // true for asynchronous
         xmlHttp.send(null);
     };
 
