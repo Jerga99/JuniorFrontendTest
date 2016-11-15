@@ -13,10 +13,10 @@ Application is only tested in Google Chrome
 FILE STRUCTURE OF APP
 ===========================================
 
-JS App is in src/js/app.js
-Html files in src/index.html
-Assets in src/style/resources
-Tests src/js/jasmine
+  1. JS App is in src/js/app.js
+  2. Html files in src/index.html
+  3. Assets in src/style/resources
+  4. Tests src/js/jasmine
 
 STRUCTURE OF APP
 ===========================================
