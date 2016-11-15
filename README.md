@@ -1,7 +1,7 @@
 # JuniorFrontendTest
 ===========================================
 
-Application is only tested in Google Chrome 
+Application is tested in Google Chrome , Safari
 
 ===========================================
 
